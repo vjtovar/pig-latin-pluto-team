@@ -34,7 +34,48 @@ class App extends Component{
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+      let vowelInd = currentWord.indexOf(vowelsArray[0])
+      console.log("vowelInd", vowelInd)
+      let quInd = currentWord.indexOf("qu")
+      let uInd = quInd + 1
+      let yInd = currentWord.indexOf("y")
+      console.log("O" == "o")
+      console.log("quInd", quInd)
+      console.log("uInd", uInd)
+      console.log("yInd", yInd)
+      if (currentWord[0] === vowelsArray[0]) {
+        currentWord = currentWord + "way";
+        
+      } 
+      else if(vowelInd === 1 && (currentWord.length === 2)){
+        currentWord = currentWord.substring(vowelInd) + currentWord.charAt(0) +"ay"
+        }
+      else if(currentWord[0] === (currentWord[quInd])){
+        currentWord = currentWord.substring(uInd + 1) + currentWord.substring(0, 2)+ "ay"
+      }
+      else if(quInd === 1){
+        currentWord = currentWord.substring(uInd +1) + currentWord.substring(0, uInd +1) +"ay"
+      }
+      else if(vowelInd === -1 && currentWord.indexOf("y") === (currentWord.length -1)){
+        currentWord = currentWord.substring(yInd) + currentWord.substring(0 , yInd) +"ay"
+      }
+      else if((vowelInd === currentWord.length -1) && (yInd === vowelInd -2)){
+      currentWord = currentWord.substring(yInd) + currentWord.substring(0, yInd) +"ay"
+      }
 
+      else if(currentWord[0] !== vowelsArray[0]){
+        
+        currentWord = currentWord.substring(vowelInd) + currentWord.substring(0, vowelInd) + "ay"
+        
+      }
+
+      
+
+    
+
+  
+
+    // }
       // Remember: console.log is your friend :)
 
 
@@ -78,14 +119,14 @@ class App extends Component{
   render() {
     return (
       <>
-        <h1>Pig Latin Translator</h1>
+        <h1>Pluto's Pig Latin Translator, y'all</h1>
         <img
           src={butcherPig}
           alt="pig with butcher cut names in pig latin"
           className="butcherPig"
         />
         <div className="inputArea">
-          <h4>Enter phrase to be translated:</h4>
+          <h4>Tell Me Something Interesting:</h4>
           {/* user input field - every DOM event that happens in the input will call the handleChange method and update state */}
           <input
             type="text"
@@ -98,8 +139,8 @@ class App extends Component{
           <button onClick={this.setUpPreventDefault}>Submit</button>
           <button onClick={this.restartGame}>Clear</button>
         </div>
-        <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <p className="outputArea" >{this.state.phraseTranslated}</p>
+        <footer className="footerText">Coded by ~Valerie....Lance~</footer>
       </>
     )
   }
