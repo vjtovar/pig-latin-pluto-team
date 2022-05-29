@@ -2,16 +2,22 @@ body {
   margin: 1rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
+  background-color: pink;
 }
 
 h1 {
   font-size: 4rem;
+  color: rgb(174, 21, 21);
+  font-family: Verdana;
+  font-style: italic;
 }
 
 button {
   margin: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.999rem;
   padding: 1rem;
+  background-color: #ad2440;
+  
 }
 
 footer {
@@ -19,7 +25,7 @@ footer {
 }
 
 .butcherPig {
-  width: 12rem;
+  width: 19rem;
 }
 
 .userInput {
@@ -28,13 +34,29 @@ footer {
   height: 5rem;
   width: 20rem;
   text-align: center;
+  background-color: rgba(250, 235, 215, 0.424);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
 }
 
 .inputArea {
   background-color: #606060;
-  color: #fff;
-  border-radius: .5rem;
+  color: rgb(20, 183, 212);
+  border-radius: 3rem;
   padding: 1rem;
+  font-size: 1.2rem;
+
+}
+.outputArea {
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+
+}
+
+.footerText{
+  font-weight: bolder;
 }
 
 @media only screen and (max-width: 650px) {
@@ -47,5 +69,8 @@ footer {
     width: 90%;
     padding: 1rem;
     text-align: center;
+    background-color: rgba(250, 235, 215, 0.424);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
   }
 }
