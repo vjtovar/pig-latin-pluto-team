@@ -53,3 +53,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 - As a developer, my variables are all named semantically.
 - As a developer, I have refactored and efficient code.
 - As a developer, I have my application [deployed as a live website](https://www.netlify.com/).
+
+![portfolio1](https://user-images.githubusercontent.com/104322947/211173240-6b03efc3-a8d5-457e-bfa8-33679ce0aee0.jpg)
+
+
